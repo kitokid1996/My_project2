@@ -1,0 +1,58 @@
+/* từ tổng quan đến chi tiết */
+
+
+/* css từ ngoài vào trong và tính kích thước của box sau đó mới tính khoảng các giữa các box*/
+
+
+/* từ sau ra trước */
+
+
+/* từ trên xuống dưới */
+
+
+/* từ trái sang phải */
+
+
+/* thiết lập font chữ trong phần body và nó có tính kế thừa*/
+
+
+/* code từ thẻ con thì dần dần sẽ định hình được thẻ cha */
+
+body {
+    /* phần mặc định  */
+    /* là phần mà ta lên google font để download font chữ theo yêu cầu(lấy đường link của font chữ trên google font về bỏ vào phần head trong html) */
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+
+/* style cho container để canh chỉnh trang */
+
+.container {
+    width: 1170px;
+    padding: 0px 15px;
+    margin: 0px auto;
+    /* cho các box cùng một container thì chúng sẽ đi ra cùng row với nhau */
+    display: flex;
+}
+
+ul {
+    /* xóa dấu chấm trước list */
+    list-style: none;
+    padding: 0px;
+}
+
+#header {
+    /* đo từ box có độ cao cao nhất tới phần trên header=> top, đo từ box có độ cao thấp nhất đến phần mép dưới header=> bottom */
+    /* nhấn f8 để xem số đo của box */
+    padding: 28px 0px 10px 0px;
+    background-color: #23282d;
+    margin-bottom: 32px;
+}
+
+
+/* ==========wrapper-content========= */
+
+#content {}

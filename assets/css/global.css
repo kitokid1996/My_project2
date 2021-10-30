@@ -1,0 +1,376 @@
+.justify-content-space-between {
+    /* đưa 2 box trong container(dưới container 1 cấp) ra 2 đầu của box container */
+    justify-content: space-between;
+}
+
+.display-flex {
+    display: flex;
+}
+
+form#id-search {
+    position: relative;
+}
+
+form#id-search input {
+    background-color: #131619;
+    width: 248px;
+    border: none;
+    outline: none;
+    padding: 10px 42px 10px 15px;
+    color: #909090;
+    /* về độ cao sẽ xử lý thông qua phần padding */
+}
+
+form#id-search button {
+    /* dùng absolute để kéo button vào bên trong form */
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    /* chỗ padding nào quá nhỏ thì có thể dịch chuyển từ từ ko cần chính xác 100% */
+    padding: 10px 14px;
+    border: none;
+    outline: none;
+    background-color: #131619;
+    color: #a2a1a1;
+}
+
+
+/* style bên trong thuộc tính dùng dấu ::thuộc tính */
+
+form#id-search ::placeholder {
+    color: #a2a1a1;
+}
+
+.d-flex {
+    /* đưa về dạng inline(cho các thẻ dưới một cấp về dạng inline, còn nếu như để vào một thẻ thì thẻ sau cùng cấp với nó sẽ dôi lên cùng hàng vs nó) */
+    display: flex;
+}
+
+nav {
+    margin: 8px 0px;
+    /*  cho nó rộng ra bằng độ rộng thẻ cha của nó*/
+    flex: 100%;
+    border-right: 10px solid #ff2d2d;
+}
+
+
+/* padding vào thể <a> chứ ko padding vào thẻ <li> để người dùng dễ click */
+
+ul#main-menu li a {
+    padding: 7px 20px;
+    color: #eeeeee;
+    /* thẻ link ở dạng display: inline nên phải chuyển về dạng display: block để tác động vào kích thước của nó */
+    display: block;
+    text-decoration: none;
+}
+
+ul#main-menu {
+    margin-bottom: 0px;
+}
+
+
+/* đi vào thẻ <a> đầu tiên */
+
+ul#main-menu li:first-child a {
+    padding-left: 0px;
+}
+
+ul#main-menu li:hover a {
+    color: #4db2ec;
+}
+
+
+/* ==============futured box========== */
+
+
+/* khi code thì box nào lớn thì để phần css đó nằm trên cho nó có logic */
+
+.box .box-body {
+    margin-bottom: 20px;
+}
+
+.box .box-head h3 {
+    /* vì thẻ h3 đang ở dạng display:block nên phần nội dung "content" kéo đi rất dài => chuyển qua dạng display: inline-blocks */
+    display: inline-block;
+    background-color: #23282d;
+    color: #c5c6c7;
+    font-weight: 600;
+    padding: 3px 16px;
+    margin-bottom: 0px;
+    font-size: 16px;
+}
+
+.box .featured-post {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dadada;
+    margin-bottom: 22px;
+}
+
+
+/* canh chỉnh cho thẻ li để căn đều 3 li bên trong(dùng thuộc tính justify vào thẻ ul để nó chia 3 cái li ra đúng tỉ lệ) */
+
+ul.list-futured-post li {
+    /* thứ tự lần lượt: độ roongjpx độ gản ra độ co lại */
+    flex: 360px 0 1;
+}
+
+ul.list-futured-post li a.post-title {
+    color: #7f7f7f;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+ul.list-futured-post li a.post-theme {
+    margin-bottom: 20px;
+    /* bởi vì hiện tại thẻ <a> mặc định là display:inline=> ko tác động vào nó được=> đổi thành display:block, và những thẻ nào đuuợc set thuộc tính display:.. thì nó sẽ mang thuộc tính đó và ko liên quan gì đến thẻ con của nó  */
+    display: block;
+    /* đéo hiểu */
+    overflow: hidden;
+}
+
+
+/* thời gian scale khi có hover */
+
+ul.list-futured-post li a.post-theme:hover {
+    transform: scale(1.10);
+}
+
+
+/* thời gian chạy hiệu ứng */
+
+ul.list-futured-post li a.post-theme {
+    transition: 0.5s;
+}
+
+
+/* ==========wrapper-content========= */
+
+
+/* thiết lập độ rộng cho mục flex */
+
+
+/* =============khu vực content======= */
+
+#content {
+    flex: 765px;
+    padding-right: 15px;
+}
+
+
+/* thiết lập độ rộng cho mục flex */
+
+#sidebar {
+    flex: 375px;
+    padding-right: 15px;
+}
+
+
+/*  thiết lập  */
+
+.box.new-post h3 {
+    background-color: #4db2ec;
+    color: #fcfcfc;
+}
+
+
+/* thiết lập cho phần border kéo dài đường màu xanh */
+
+.box.new-post .box-head {
+    border-bottom: 2px solid #4db2ec;
+}
+
+.box.new-post .box-body {
+    margin-top: 32px;
+}
+
+
+/* thiết lập để thẻ <li> thành các ngăn chứa các mục flex=> các thể con sẽ là mục flex và nằm ngang row */
+
+ul.list-content-post li {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+
+/* thiết lập độ rộng cho các mục flex */
+
+ul.list-content-post li a.post-theme {
+    flex: 263px;
+    padding-right: 15px;
+}
+
+
+/* thiết lập độ rộng cho các mục flex */
+
+ul.list-content-post li .more-info {
+    flex: 472px;
+    padding: 0px 15px;
+}
+
+
+/* thiết lập màu sắc font chữ */
+
+ul.list-content-post li .more-info a.post-title {
+    color: #111111;
+    font-size: 21px;
+    font-weight: 600;
+    display: block;
+}
+
+ul.list-content-post li .more-info a.post-title:hover {
+    color: #4db2ec;
+}
+
+ul.list-content-post li .more-info .more-publisher {
+    font-size: 11px;
+    font-weight: 600;
+    /* vì phần publiser nhấn vào ra link khác => ưu tiên code thêm vùng đệm cho nó để dễ nhấn chuột vào */
+    padding: 8px 0px;
+}
+
+ul.list-content-post li .more-info .more-publisher a.post-author {
+    color: #111111;
+}
+
+ul.list-content-post li .more-info .more-publisher span.post-date {
+    color: #c3c3c3;
+}
+
+ul.list-content-post li .more-info p.post-excerpt {
+    color: #c7c7c7;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+
+/* ===================sidebar========== */
+
+#sidebar .ads {
+    display: block;
+    margin-bottom: 43px;
+}
+
+.box.top-topic .box-header {
+    display: flex;
+    border-bottom: 2px solid #ff2d2d;
+}
+
+.box.top-topic h3 {
+    padding: 1px 0px;
+    background-color: #ff2d2d;
+    margin-bottom: 0px;
+}
+
+ul.list-topic li a {
+    font-size: 16px;
+    color: #212121;
+    font-weight: 600;
+    margin-bottom: 0px;
+    display: flex;
+    /* float: left; */
+    padding: 5px 0px;
+}
+
+ul.list-topic li a:hover {
+    color: #ff4545;
+}
+
+ul.list-topic li a p {
+    margin-bottom: 0px;
+}
+
+ul.list-topic li a.margin-add {
+    margin-top: 28px;
+}
+
+
+/* ul.list-topic li .num-post {
+    font-size: 16px;
+    color: #ff6b6b;
+    font-weight: 600;
+    margin-bottom: 0px;
+    display: block;
+} */
+
+
+/* ===============footer============ */
+
+#footer {
+    background-color: #2e2f30;
+    padding-top: 53px;
+    padding-bottom: 80px;
+    color: #b8b8b8;
+}
+
+.box.logo h3,
+.box.about-us h3,
+.box.follow h3 {
+    background-color: #2e2f30;
+    padding: 0px 0px;
+    margin-bottom: 45px;
+}
+
+.box.logo {
+    flex: 278x;
+    padding-right: 15px;
+}
+
+.box.about-us {
+    flex: 667px;
+}
+
+.box.follow {
+    flex: 165;
+    padding-left: 15px;
+}
+
+.box.logo .box-body a {
+    display: block;
+    margin-top: 68px;
+}
+
+.box.about-us p {
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+.box.follow .box-body ul.list-social {
+    width: 165px;
+    justify-content: space-around;
+    display: flex;
+}
+
+
+/* .box.follow .box-body ul.list-social li {
+    flex: 33px;
+} */
+
+.box.follow .box-body ul.list-social li a i {
+    background-color: #434648;
+    display: block;
+    padding: 6px 6px;
+}
+
+
+/* =============copy-right=========== */
+
+#wp-copyright {
+    background-color: #222527;
+    /* padding: 5px 0px; */
+    /* font-size có tính kế thừa */
+    font-size: 14px;
+    /* color cũng có tính kế thừa */
+    color: #eaeaea;
+}
+
+#wp-copyright .container .copy-right {
+    margin-bottom: 0px;
+    padding: 17px 0px;
+}
+
+#wp-copyright .container .display-flex li a {
+    display: block;
+    padding: 17px 0px 17px 15px;
+    float: left;
+}

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- định nghĩa cho font sizze  của chữ-->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <!-- css cho font icon cho font icon  -->
+    <link rel="stylesheet" href="assets/font/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <title>Newspaper</title>
+</head>
+
+<body>
+    <!--chứa tất cả nội dung của trang  -->
+    <div id="wrapper">
+        <!-- chứa phần header của trang  và trong phần container chia làm 2 container nhỏ -->
+        <div id="header">
+            <!--  những box nào muốn cho nó cùng một row thì cho nó vào cùng một container-->
+            <!-- quan trọng: container khi mà style cho nó display: flex thì nó sẽ tách những thẻ dưới nó 'một cấp' từ dạng column thành row-->
+            <div class="container justify-content-space-between">
+                <a href="">
+                    <img src="assets/image/logo.png" alt="">
+                </a>
+                <!-- end logo -->
+                <form action="" id="id-search">
+                    <input type="text" name=q placeholder="Bạn muốn tìm gì?">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
+
+            </div>
+            <!-- container chứa phần menu -->
+            <!-- thẻ div nếu như có class thì nó sẽ có thuộc tính display: flex nếu ko thì nó sẽ có thuộc tính display: block -->
+            <div class="container">
+                <!-- thẻ nav mang thuộc tính display: block -->
+                <nav>
+                    <!-- cái nào có một thì dùng menu có nhiều thì dùng class -->
+                    <ul id="main-menu" class="d-flex">
+                        <li><a href="">Trang chủ</a></li>
+                        <li>
+                            <a href="">Thời trang</a></li>
+                        <li>
+                            <a href="">Đời sống</a></li>
+                        <li>
+                            <a href="">Xã hội</a></li>
+                        <li>
+                            <a href="">Bóng đá</a></li>
+                        <li>
+                            <a href="">Video</a></li>
+                        <li>
+                            <a href="">Sự kiện</a></li>
+                        <li>
+                            <a href="">Liên hệ</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+        <!-- End header -->
+        <!-- phần này chứa thông tin nổi bậc -->
+        <div id="wp-featured-post" class="container">
+            <!-- box chứa 2 phàn là header và body trong box -->
+            <div class="box ">
+                <!-- phần header -->
+                <div class="box-head">
+                    <h3>NỔI BẬT</h3>
+                </div>
+                <!-- phần body -->
+                <div class="box-body featured-post">
+                    <!-- thẻ cha là display: flex thì những thẻ con dưới một cấp sẽ là những mục của display: flex -->
+                    <ul class="list-futured-post d-flex justify-content-space-between">
+                        <li>
+                            <a href="" class="post-theme"><img src="assets/image/pic-1.png" alt=""></a>
+                            <a href="" class="post-title">Xu hướng thời trang hè 2020: Những mảnh ghép đáng được chú ý</a>
+
+                        </li>
+                        <li>
+                            <a href="" class="post-theme"><img src="assets/image/pic-2.png" alt=" "></a>
+                            <a href="" class="post-title">Buổi trình diễn thời trang mùa xuân tại Đại học Michigan đã bắt đầu</a>
+                        </li>
+                        <li>
+                            <a href="" class="post-theme"><img src="assets/image/pic-3.png" alt=""></a>
+                            <a href="" class="post-title">Bật mí cách mặc đẹp cho người mập trở nên thon gọn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End featured post -->
+        <!-- phần chứa content còn lại và  sidebar -->
+        <!-- dùng class container này để style cho việc định dạng khung trang web(canh chỉnh) và nhưng cái nào cùng hàng thì cho vào một container để dễ sử dụng thuộc tính display-flex(thuộc tính này cho phép 2 thẻ nằm trên một hàng(2 thẻ có thuộc tính display-block))-->
+        <div id="wrapper-content" class="container">
+            <!-- phần content bên trái -->
+            <div id="content">
+                <!-- box chứa nội dung của phần content -->
+                <div class="box new-post">
+                    <!-- phần header của box -->
+                    <div class="box-head">
+                        <h3>BÀI VIẾT MỚI</h3>
+                    </div>
+                    <!-- phần body của box -->
+                    <div class="box-body">
+                        <!-- thường thì trong box-body sẽ là thẻ <ul>  -->
+                        <ul class="list-content-post ">
+                            <li>
+                                <!--  -->
+                                <a href="" class="post-theme"><img src="assets/image/pic-4.png.png" alt=""></a>
+
+                                <div class="more-info">
+                                    <a href="" class="post-title">Bạn có phải là một người phụ nữ có phong cách?</a>
+                                    <!-- thẻ <a> không xuống hàng nhưng nếu có thẻ <div> vào thì nó sẽ xuống hàng -->
+                                    <div class="more-publisher">
+                                        <a href="" class="post-author">phancuong</a>
+                                        <span class="post-date">10/08/2020</span>
+                                    </div>
+                                    <!-- xuống hàng -->
+                                    <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-theme"><img src="assets/image/pic-5.png.png" alt=""></a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Cách để bạn ltuôn tỏa sáng trước đám đông</a>
+                                    <div class="more-publisher">
+                                        <a href="" class="post-author">phancuong</a>
+                                        <span class="post-date">12/08/2020</span>
+
+                                    </div>
+                                    <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-theme"><img src="assets/image/pic-6.png.png" alt=""></a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Những kiểu tóc mới là xu hướng của giới trẻ 2020</a>
+                                    <div class="more-publisher">
+                                        <a href="" class="post-author">phancuong</a>
+                                        <span class="post-date">14/06/2020</span>
+
+                                    </div>
+                                    <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-theme"><img src="assets/image/pic-7.png" alt=""></a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">15 địa điểm du lịch nổi tiếng bạn cần đến tại Việt Nam</a>
+                                    <div class="more-publisher">
+                                        <a href="" class="post-author">phancuong</a>
+                                        <span class="post-date">02/04/2020</span>
+
+                                    </div>
+                                    <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-theme"><img src="assets/image/pic-8.png" alt=""></a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Hãy xách balo lên và đi và trải nghiệm những khoảnh khắc thú vị</a>
+                                    <div class="more-publisher">
+                                        <a href="" class="post-author">phancuong</a>
+                                        <span class="post-date">16/03/2020</span>
+
+                                    </div>
+                                    <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="" class="post-theme"><img src="assets/image/pic-9.png" alt=""></a>
+                                <div class="more-info">
+                                    <a href="" class="post-title">Top 10 nữ hoàng DJ nỗi tiếng nhất Las Vegas bạn cần biết</a>
+                                    <div class="more-publisher">
+                                        <a href="" class="post-author">phancuong</a>
+                                        <span class="post-date">10/02/2020</span>
+
+                                    </div>
+                                    <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <!-- end content -->
+            <div id="sidebar">
+                <!-- ads là quảng cáo -->
+                <a href="" class="ads"><img src="assets/image/pic-10.png" alt=""></a>
+                <div class="box top-topic">
+                    <div class="box-header">
+                        <h3>CHỦ ĐỀ QUAN TÂM</h3>
+                    </div>
+                    <div class="box-body">
+                        <ul class="list-topic">
+                            <li>
+                                <a href="" class="justify-content-space-between margin-add">
+                                    <p>Thời trang</p>
+                                    <p class="num-post">20</p>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="" class="justify-content-space-between">
+                                    <p>Đời Sống</p>
+                                    <p class="num-post">30</p>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="" class="justify-content-space-between">
+                                    <p>Xã Hội</p>
+                                    <p class="num-post">26</p>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="" class="justify-content-space-between">
+                                    <p>Bóng Đá</p>
+                                    <p class="num-post">35</p>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="" class="justify-content-space-between">
+                                    <p>Điện Ảnh</p>
+                                    <p class="num-post">29</p>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="" class="justify-content-space-between">
+                                    <p>Sự Kiện</p>
+                                    <p class="num-post">15</p>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="" class="justify-content-space-between">
+                                    <p>Thời Trang</p>
+                                    <p class="num-post">20</p>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="" class="justify-content-space-between">
+                                    <p>Du Lịch</p>
+                                    <p class="num-post">34</p>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="" class="justify-content-space-between">
+                                    <p>Nội Trợ</p>
+                                    <p class="num-post">45</p>
+                                </a>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end sidebar -->
+        </div>
+        <!-- end wrapper content -->
+        <div id="footer">
+            <div class="container">
+                <div class="box logo">
+
+                    <div class="box-body">
+                        <a href="">
+                            <img src="assets/image/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="box about-us">
+                    <div class="box-head">
+                        <h3>VỀ CHÚNG TÔI</h3>
+                    </div>
+                    <div class="box-body">
+                        <P>Unitop.vn là hệ thống đào tạo lập trình web online theo lộ trình từng bước. Hệ thống phát triển từ tháng 6/2017 đến nay đã có gần 2.000 người theo học và đạt kết quả tốt.</P>
+                        <a href="http://unitop.vn">http://unitop.vn</a>
+                    </div>
+                </div>
+                <div class="box follow">
+                    <div class="box-head">
+                        <h3>THEO DÕI</h3>
+                    </div>
+                    <div class="box-body">
+                        <ul class="list-social">
+                            <li>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fab fa-youtube"></i></a>
+                            </li>
+                            <li>
+                                <a href=""><i class="fas fa-table-tennis"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    <!-- end footer -->
+    <div id="wp-copyright">
+        <div class="container justify-content-space-between">
+            <p class="copy-right">
+                © Unitop.vn - Html Css 21 Ngày
+            </p>
+            <ul class="footer-menu display-flex ">
+                <li>
+                    <a href=""></a>Bảo mật</li>
+                <li>
+                    <a href=""></a>Quảng cáo</li>
+                <li>
+                    <a href=""></a>Liên hệ</li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- end copyright -->
+    </div>
+
+
+</body>
+
+</html>
